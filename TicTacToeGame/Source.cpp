@@ -25,6 +25,7 @@ void main()
 		if (menuOption == 1)
 		{
 			//Player vs Player
+			game.MainFunction();
 		}
 		else if (menuOption == 2)
 		{
