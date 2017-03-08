@@ -1,20 +1,2 @@
-﻿  Source.cpp
-  Player.cpp
-  MainMenu.cpp
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(22): warning C4129: '/': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(23): warning C4129: ' ': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(24): warning C4129: ' ': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(24): warning C4129: '/': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(26): warning C4129: '_': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(29): warning C4129: ' ': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(29): warning C4129: '/': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(30): warning C4129: '|': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(30): warning C4129: ' ': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(31): warning C4129: '/': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(32): warning C4129: ' ': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(32): warning C4129: '-': unrecognized character escape sequence
-c:\users\thomas wiltshire\desktop\pc\github\aie-exercises-tictactoegame\tictactoegame\mainmenu.cpp(33): warning C4129: '_': unrecognized character escape sequence
-  Game.cpp
-  Generating Code...
-  TicTacToeGame.vcxproj -> C:\Users\Thomas Wiltshire\Desktop\Pc\GitHub\AIE-Exercises-TicTacToeGame\x64\Debug\TicTacToeGame.exe
-  TicTacToeGame.vcxproj -> C:\Users\Thomas Wiltshire\Desktop\Pc\GitHub\AIE-Exercises-TicTacToeGame\x64\Debug\TicTacToeGame.pdb (Full PDB)
+﻿  Game.cpp
+  TicTacToeGame.vcxproj -> C:\Users\s171043\Documents\GitHub\AIE-Exercises-TicTacToeGame\x64\Debug\TicTacToeGame.exe

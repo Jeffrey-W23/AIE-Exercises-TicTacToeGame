@@ -4,17 +4,16 @@ using namespace std;
 
 Game::Game()
 {
+	playing = true;
+	board[3][3];
 }
 
 void Game::MainFunction()
 {
-	bool playing = true;
 	while (playing)
 	{
-		char board[3][3] = { { '1', '2', '3' },{ '4', '5', '6' },{ '7', '8', '9' } };
-
-		system("pause");
-		system("cls");
+		board[3][3] = map.DrawMap();
+		player1.PlayerMove(board[3][3]);
 	}
 }
 

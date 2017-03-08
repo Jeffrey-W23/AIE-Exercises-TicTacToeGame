@@ -4,6 +4,11 @@ class Player
 {
 public:
 	Player();
-	void Move(char board[3][3]);
 	~Player();
+	void PlayerMove(char board[3][3]);
+
+private:
+	int userInput;
+	int playerId;
+	char playerIcon;
 };
