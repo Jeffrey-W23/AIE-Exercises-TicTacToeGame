@@ -6,9 +6,7 @@ public:
 	Map();
 	~Map();
 
-	char DrawMap();
+	void DrawMap(char board[3][3]);
 
 private:
-	char board[3][3];
 };
-
