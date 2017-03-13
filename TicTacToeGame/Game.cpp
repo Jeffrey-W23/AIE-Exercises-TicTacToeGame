@@ -27,23 +27,46 @@ void Game::MainFunction()
 
 	while (playing)
 	{
-		bool PlayerOne = player1.RunPlayer(1, board);
-
-		map.DrawMap(board);
+		int player1 = PlayerTurnTaking(1);
 		
-		if (PlayerOne)
+		if (player1 == 1)
 		{
-			system("pause");
+			playing = false;
+			cout << "PLAYER 1 WIN!" << endl;
+			system("Pause");
 		}
 
-		bool PlayerTwo = player2.RunPlayer(2, board);
-
-		map.DrawMap(board);
-
-		if (PlayerTwo)
+		if (player1 == 2)
 		{
-			system("pause");
+			playing = false;
+			cout << "DRAW!" << endl;
+			system("Pause");
+		}
+
+		int player2 = PlayerTurnTaking(2);
+		
+		if (player2 == 1)
+		{
+			playing = false;
+			cout << "PLAYER 2 WIN!" << endl;
+			system("Pause");
+		}
+
+		if (player2 == 2)
+		{
+			playing = false;
+			cout << "DRAW!" << endl;
+			system("Pause");
 		}
 	}
+}
+
+int Game::PlayerTurnTaking(int playerNumber)
+{
+	map.DrawMap(board);
+	int currentPlayer = player.RunPlayer(playerNumber, board);
+	map.DrawMap(board);
+
+	return currentPlayer;
 }
 
