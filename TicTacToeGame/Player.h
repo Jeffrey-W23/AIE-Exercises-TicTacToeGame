@@ -10,7 +10,5 @@ public:
 	int WinCondition(char board[3][3]);
 
 private:
-	int userInput;
 	char playerIcon;
-	int playerId;
 };

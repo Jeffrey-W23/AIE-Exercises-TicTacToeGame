@@ -4,8 +4,6 @@ using namespace std;
 
 Player::Player()
 {
-	userInput = 0;
-	playerId = 0;
 	playerIcon = ' ';
 }
 
@@ -42,55 +40,19 @@ void Player::PlayerMove(char board[3][3])
 
 	while (Invalid)
 	{
+		int userInput;
+
 		// Type a move
 		cin >> userInput;
 		cin.clear();
 		cin.ignore(999999, '\n');
 
-		// Place player icon on the board
-		if (userInput == 1 && board[0][0] == '1')
+		int row = (userInput - 1) / 3;
+		int col = (userInput - 1) % 3;
+
+		if (board[row][col] != 'x' && board[row][col] != 'o')
 		{
-			board[0][0] = playerIcon;
-			Invalid = false;
-		}
-		else if (userInput == 2 && board[0][1] == '2')
-		{
-			board[0][1] = playerIcon;
-			Invalid = false;
-		}
-		else if (userInput == 3 && board[0][2] == '3')
-		{
-			board[0][2] = playerIcon;
-			Invalid = false;
-		}
-		else if (userInput == 4 && board[1][0] == '4')
-		{
-			board[1][0] = playerIcon;
-			Invalid = false;
-		}
-		else if (userInput == 5 && board[1][1] == '5')
-		{
-			board[1][1] = playerIcon;
-			Invalid = false;
-		}
-		else if (userInput == 6 && board[1][2] == '6')
-		{
-			board[1][2] = playerIcon;
-			Invalid = false;
-		}
-		else if (userInput == 7 && board[2][0] == '7')
-		{
-			board[2][0] = playerIcon;
-			Invalid = false;
-		}
-		else if (userInput == 8 && board[2][1] == '8')
-		{
-			board[2][1] = playerIcon;
-			Invalid = false;
-		}
-		else if (userInput == 9 && board[2][2] == '9')
-		{
-			board[2][2] = playerIcon;
+			board[row][col] = playerIcon;
 			Invalid = false;
 		}
 		else
