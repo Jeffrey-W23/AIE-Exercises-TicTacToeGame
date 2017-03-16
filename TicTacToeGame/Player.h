@@ -1,14 +1,22 @@
 #pragma once
 
+enum WinCondition 
+{
+	win,
+	lose,
+	draw
+};
+
 class Player
 {
 public:
-	Player();
+	Player(int Id, char Icon);
 	~Player();
-	int RunPlayer(int playerId, char board[3][3]);
-	void PlayerMove(char board[3][3]);
-	int WinCondition(char board[3][3]);
+	WinCondition RunPlayer(int playerId, char** board);
+	void PlayerMove(char** board);
+	WinCondition WinCondition1(char** board);
 
 private:
 	char playerIcon;
+	int playerId;
 };

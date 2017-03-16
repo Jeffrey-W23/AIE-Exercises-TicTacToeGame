@@ -6,24 +6,41 @@ Game::Game()
 {
 	playing = true;
 	board = map.CreateMap();
+	player[0] = new Player(1, 'X');
+	player[1] = new Player(2, 'O');
 }
 
 Game::~Game()
 {
+	//for () // delete player
 }
 
 void Game::MainFunction()
 {
 	map.DrawMap();
 
+	int turn = 0;
+
 	while (playing)
 	{
-		int turn = 0;
-
 		//take turn
 		map.DrawMap();
-		player[turn].RunPlayer(board);
+		WinCondition wincon = player[turn].RunPlayer(board);
 		map.DrawMap();
+
+		if (wincon == win)
+		{
+			playing = false;
+			cout << "PLAYER 1 WIN!" << endl; // for both players now
+			system("Pause");
+		}
+
+		if (wincon == draw)
+		{
+			playing = false;
+			cout << "DRAW!" << endl;
+			system("Pause");
+		}
 
 		//swap turns
 		if (turn == 0)
@@ -33,35 +50,6 @@ void Game::MainFunction()
 		else
 		{
 			turn = 0;
-		}
-
-
-		if (player1 == 1)
-		{
-			playing = false;
-			cout << "PLAYER 1 WIN!" << endl;
-			system("Pause");
-		}
-
-		if (player1 == 2)
-		{
-			playing = false;
-			cout << "DRAW!" << endl;
-			system("Pause");
-		}
-		
-		if (player2 == 1)
-		{
-			playing = false;
-			cout << "PLAYER 2 WIN!" << endl;
-			system("Pause");
-		}
-
-		if (player2 == 2)
-		{
-			playing = false;
-			cout << "DRAW!" << endl;
-			system("Pause");
 		}
 	}
 }

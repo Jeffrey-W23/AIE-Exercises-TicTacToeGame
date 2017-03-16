@@ -1,7 +1,6 @@
-﻿  Map.cpp
+﻿  Player.cpp
   Game.cpp
-c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(57): error C2660: 'Map::DrawMap': function does not take 1 arguments
-c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(58): error C2664: 'int Player::RunPlayer(int,char [][3])': cannot convert argument 2 from 'char **' to 'char [][3]'
-  c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(58): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
-c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(59): error C2660: 'Map::DrawMap': function does not take 1 arguments
+c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(28): error C2228: left of '.RunPlayer' must have class/struct/union
+  c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(28): note: type is 'Player *'
+  c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(28): note: did you intend to use '->' instead?
   Generating Code...

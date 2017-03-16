@@ -13,7 +13,7 @@ public:
 
 private:
 	bool playing;
-	Player player[2];
+	Player* player[2];
 	Map map;
 	char** board;
 };
