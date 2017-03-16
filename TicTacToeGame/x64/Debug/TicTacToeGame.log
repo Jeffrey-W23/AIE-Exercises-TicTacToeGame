@@ -1,3 +1,7 @@
-﻿  Player.cpp
-cl : Command line warning D9028: minimal rebuild failure, reverting to normal build
-  TicTacToeGame.vcxproj -> C:\Users\s171043\Documents\GitHub\AIE-Exercises-TicTacToeGame\x64\Debug\TicTacToeGame.exe
+﻿  Map.cpp
+  Game.cpp
+c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(57): error C2660: 'Map::DrawMap': function does not take 1 arguments
+c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(58): error C2664: 'int Player::RunPlayer(int,char [][3])': cannot convert argument 2 from 'char **' to 'char [][3]'
+  c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(58): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(59): error C2660: 'Map::DrawMap': function does not take 1 arguments
+  Generating Code...

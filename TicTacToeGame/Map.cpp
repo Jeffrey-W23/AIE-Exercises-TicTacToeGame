@@ -4,10 +4,14 @@ using namespace std;
 
 Map::Map()
 {
-	char temp[3][3] = { { '1', '2', '3' },{ '4', '5', '6' },{ '7', '8', '9' } };
+	char temp[3][3] = { { '1', '2', '3' },{ '4', '5', '6' },{ '7', '8', '9' } }; // convert the i and j into characters. then dont need this.
+
+	board = new char*[3];
 
 	for (int i = 0; i < 3; ++i)
 	{
+		board[i] = new char[3];
+
 		for (int j = 0; j < 3; ++j)
 		{
 			board[i][j] = temp[i][j];
@@ -17,9 +21,10 @@ Map::Map()
 
 Map::~Map()
 {
+	//for () // delete board
 }
 
-void Map::DrawMap(char board[3][3])
+void Map::DrawMap()
 {
 	//Draw map
 	system("cls");
@@ -36,18 +41,6 @@ void Map::DrawMap(char board[3][3])
 
 char** Map::CreateMap()
 {
-	char** temp = new char*[3];
-
-	for (int i = 0; i < 3; i++) {
-
-		temp[i] = new char[3];
-
-		for (int j = 0; j < 3; j++)
-		{
-			temp[i][j] = board[i][j];
-		}
-	}
-
 	//return map
-	return temp;
+	return board;
 }

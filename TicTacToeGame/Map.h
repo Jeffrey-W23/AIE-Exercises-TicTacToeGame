@@ -7,8 +7,8 @@ public:
 	~Map();
 
 	char** CreateMap();
-	void DrawMap(char board[3][3]);
+	void DrawMap();
 
 private:
-	char board[3][3];
+	char** board;
 };

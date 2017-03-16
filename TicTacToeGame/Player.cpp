@@ -47,13 +47,20 @@ void Player::PlayerMove(char board[3][3])
 		cin.clear();
 		cin.ignore(999999, '\n');
 
-		int row = (userInput - 1) / 3;
-		int col = (userInput - 1) % 3;
-
-		if (board[row][col] != 'x' && board[row][col] != 'o')
+		if (userInput < 10 && userInput > 0)
 		{
-			board[row][col] = playerIcon;
-			Invalid = false;
+			int row = (userInput - 1) / 3;
+			int col = (userInput - 1) % 3;
+
+			if (board[row][col] != 'x' && board[row][col] != 'o')
+			{
+				board[row][col] = playerIcon;
+				Invalid = false;
+			}
+			else
+			{
+				cout << "Please take this seriously, chose a tile that actually excists or one that hasnt already been taken.." << endl;
+			}
 		}
 		else
 		{

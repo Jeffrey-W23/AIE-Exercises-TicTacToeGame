@@ -5,16 +5,7 @@ using namespace std;
 Game::Game()
 {
 	playing = true;
-
-	char** temp = map.CreateMap();
-
-	for (int i = 0; i < 3; i++)
-	{
-		for (int j = 0; j < 3; j++)
-		{
-			board[i][j] = temp[i][j];
-		}
-	}
+	board = map.CreateMap();
 }
 
 Game::~Game()
@@ -23,12 +14,28 @@ Game::~Game()
 
 void Game::MainFunction()
 {
-	map.DrawMap(board);
+	map.DrawMap();
 
 	while (playing)
 	{
-		int player1 = PlayerTurnTaking(1);
-		
+		int turn = 0;
+
+		//take turn
+		map.DrawMap();
+		player[turn].RunPlayer(board);
+		map.DrawMap();
+
+		//swap turns
+		if (turn == 0)
+		{
+			turn = 1;
+		}
+		else
+		{
+			turn = 0;
+		}
+
+
 		if (player1 == 1)
 		{
 			playing = false;
@@ -42,8 +49,6 @@ void Game::MainFunction()
 			cout << "DRAW!" << endl;
 			system("Pause");
 		}
-
-		int player2 = PlayerTurnTaking(2);
 		
 		if (player2 == 1)
 		{
@@ -59,14 +64,5 @@ void Game::MainFunction()
 			system("Pause");
 		}
 	}
-}
-
-int Game::PlayerTurnTaking(int playerNumber)
-{
-	map.DrawMap(board);
-	int currentPlayer = player.RunPlayer(playerNumber, board);
-	map.DrawMap(board);
-
-	return currentPlayer;
 }
 

@@ -10,11 +10,10 @@ public:
 	~Game();
 
 	void MainFunction();
-	int PlayerTurnTaking(int playerNumber);
 
 private:
 	bool playing;
-	Player player;
+	Player player[2];
 	Map map;
-	char board[3][3];
+	char** board;
 };
