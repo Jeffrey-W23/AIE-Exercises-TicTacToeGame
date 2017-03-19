@@ -12,10 +12,10 @@ Player::~Player()
 {
 }
 
-WinCondition Player::RunPlayer(int playerId, char** board)
+WinCondition Player::RunPlayer(char** board)
 {
 	// Display which players turn it is
-	cout << "Player " << playerId << ", your move." << endl;
+	cout << "                                                    PLAYER " << playerId << ", YOUR MOVE." << endl;
 
 	//place the players icon on the board
 	PlayerMove(board);
@@ -50,12 +50,12 @@ void Player::PlayerMove(char** board)
 			}
 			else
 			{
-				cout << "Please take this seriously, chose a tile that actually excists or one that hasnt already been taken.." << endl;
+				cout << "PLEASE TAKE THIS SERIOUSLY, CHOOSE A TILE THAT ACTUALLY EXISTS OR ONE THAT HASN'T ALREADY BEEN TAKEN.." << endl;
 			}
 		}
 		else
 		{
-			cout << "Please take this seriously, chose a tile that actually excists or one that hasnt already been taken.." << endl;
+			cout << "PLEASE TAKE THIS SERIOUSLY, CHOOSE A TILE THAT ACTUALLY EXISTS OR ONE THAT HASN'T ALREADY BEEN TAKEN.." << endl;
 		}
 	}
 }

@@ -12,7 +12,7 @@ class Player
 public:
 	Player(int Id, char Icon);
 	~Player();
-	WinCondition RunPlayer(int playerId, char** board);
+	WinCondition RunPlayer(char** board);
 	void PlayerMove(char** board);
 	WinCondition WinCondition1(char** board);
 

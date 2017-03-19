@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Game.h"
+#include <conio.h>
 using namespace std;
 
 Game::Game()
@@ -10,9 +11,11 @@ Game::Game()
 	player[1] = new Player(2, 'O');
 }
 
+// not working
 Game::~Game()
 {
-	//for () // delete player
+	delete[] player[0];
+	delete[] player[1];
 }
 
 void Game::MainFunction()
@@ -25,21 +28,22 @@ void Game::MainFunction()
 	{
 		//take turn
 		map.DrawMap();
-		WinCondition wincon = player[turn].RunPlayer(board);
+		WinCondition wincon = player[turn]->RunPlayer(board);
 		map.DrawMap();
 
 		if (wincon == win)
 		{
+			cout << "                                                       PLAYER " << turn+1 << " WINS!" << endl << endl;
 			playing = false;
-			cout << "PLAYER 1 WIN!" << endl; // for both players now
-			system("Pause");
+			cout << "                                                 PRESS ANY KEY TO CONTINUE..." << endl;
+			_getch();
 		}
-
-		if (wincon == draw)
+		else if (wincon == draw)
 		{
+			cout << "                                                            DRAW!" << endl << endl;
 			playing = false;
-			cout << "DRAW!" << endl;
-			system("Pause");
+			cout << "                                                 PRESS ANY KEY TO CONTINUE..." << endl;
+			_getch();
 		}
 
 		//swap turns

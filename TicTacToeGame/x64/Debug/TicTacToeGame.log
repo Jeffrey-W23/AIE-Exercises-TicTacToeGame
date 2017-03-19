@@ -1,6 +1,8 @@
-﻿  Player.cpp
+﻿  Source.cpp
+  Player.cpp
+  Map.cpp
+  MainMenu.cpp
   Game.cpp
-c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(28): error C2228: left of '.RunPlayer' must have class/struct/union
-  c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(28): note: type is 'Player *'
-  c:\users\s171043\documents\github\aie-exercises-tictactoegame\tictactoegame\game.cpp(28): note: did you intend to use '->' instead?
   Generating Code...
+  TicTacToeGame.vcxproj -> C:\Users\Thomas Wiltshire\Desktop\Pc\GitHub\AIE-Exercises-TicTacToeGame\x64\Debug\TicTacToeGame.exe
+  TicTacToeGame.vcxproj -> C:\Users\Thomas Wiltshire\Desktop\Pc\GitHub\AIE-Exercises-TicTacToeGame\x64\Debug\TicTacToeGame.pdb (Full PDB)
