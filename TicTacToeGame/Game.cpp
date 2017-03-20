@@ -14,8 +14,8 @@ Game::Game()
 // not working
 Game::~Game()
 {
-	delete[] player[0];
-	delete[] player[1];
+	delete player[0];
+	delete player[1];
 }
 
 void Game::MainFunction()
