@@ -1,9 +1,12 @@
+//#include, using etc
 #include <iostream>
 #include "Map.h"
 using namespace std;
 
+// Default Constructor
 Map::Map()
 {
+	// initialize game board
 	char temp[3][3] = { { '1', '2', '3' },{ '4', '5', '6' },{ '7', '8', '9' } };
 
 	board = new char*[3];
@@ -19,9 +22,10 @@ Map::Map()
 	}
 }
 
-// not working
+// Default Destructor
 Map::~Map()
 {
+	// delete board
 	for (int i = 0; i < 3; ++i)
 	{	
 		delete[] board[i];
@@ -32,7 +36,7 @@ Map::~Map()
 
 void Map::DrawMap()
 {
-	//Draw map
+	//Draw tic tac toe board
 	system("cls");
 	cout << endl << endl << endl;
 	cout << "                                                          |      |      " << endl;
@@ -48,6 +52,6 @@ void Map::DrawMap()
 
 char** Map::CreateMap()
 {
-	//return map
+	//return created board
 	return board;
 }

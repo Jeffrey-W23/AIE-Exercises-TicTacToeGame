@@ -1,7 +1,11 @@
-﻿  Source.cpp
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (TicTacToeGame.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Player.cpp
   Map.cpp
-  MainMenu.cpp
   Game.cpp
   Generating Code...
-  TicTacToeGame.vcxproj -> C:\Users\s171043\Documents\GitHub\AIE-Exercises-TicTacToeGame\x64\Debug\TicTacToeGame.exe
+  Compiling...
+  Source.cpp
+  MainMenu.cpp
+  Generating Code...
+  TicTacToeGame.vcxproj -> C:\Users\Thomas Wiltshire\Desktop\Pc\GitHub\AIE-Exercises-TicTacToeGame\x64\Debug\dw.exe
+  TicTacToeGame.vcxproj -> C:\Users\Thomas Wiltshire\Desktop\Pc\GitHub\AIE-Exercises-TicTacToeGame\x64\Debug\dw.pdb (Full PDB)

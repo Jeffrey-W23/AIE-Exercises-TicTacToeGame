@@ -1,3 +1,4 @@
+//#include, using etc
 #include <iostream>
 #include <chrono>
 #include "MainMenu.h"
@@ -5,6 +6,7 @@
 #include <crtdbg.h>
 using namespace std;
 
+// Function to set the console windows width and height.
 void SetWindowSize(int WinWidth, int WinHeight)
 {
 	_COORD Coord;
@@ -22,16 +24,20 @@ void SetWindowSize(int WinWidth, int WinHeight)
 	SetConsoleWindowInfo(Handle, TRUE, &Rect);
 }
 
+// Main function
 void main()
 {
+	// Check for memory leaks
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
+	// Run the window size function
 	SetWindowSize(120, 25);
 
+	// Start the game loop
 	bool gameRunning = true;
-
 	while (gameRunning)
 	{
+		// Run the menu
 		MainMenu menu;
 		gameRunning = menu.StartMenu();
 	}

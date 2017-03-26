@@ -1,17 +1,21 @@
+//#include, using etc
 #include <iostream>
 #include "Player.h"
 using namespace std;
 
+// Default Constructor
 Player::Player(int Id, char Icon)
 {
 	playerId = Id;
 	playerIcon = Icon;
 }
 
+// Default Destructor
 Player::~Player()
 {
 }
 
+// the main player function
 WinCondition Player::RunPlayer(char** board)
 {
 	// Display which players turn it is
@@ -25,19 +29,20 @@ WinCondition Player::RunPlayer(char** board)
 	return wincon;
 }
 
+// function to place the players X or O on the board
 void Player::PlayerMove(char** board)
 {
 	bool Invalid = true;
 
 	while (Invalid)
 	{
+		// get the users input
 		int userInput;
-
-		// Type a move
 		cin >> userInput;
 		cin.clear();
 		cin.ignore(999999, '\n');
 
+		// Place the players icon on the game board
 		if (userInput < 10 && userInput > 0)
 		{
 			int row = (userInput - 1) / 3;
@@ -60,6 +65,7 @@ void Player::PlayerMove(char** board)
 	}
 }
 
+// function to check if the player has won
 WinCondition Player::WinCondition1(char** board)
 {
 	//ver win
